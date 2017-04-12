@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="Allex Lima"/>
+    <meta name="theme-color" content="#4C4C4C">
+    <link rel="icon" sizes="44x44" href="{{ url_for('static', filename='img/lamp_on.png') }}">
+    <title>LampREST-Server</title>
+    <link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
+    <link rel=stylesheet type=text/css href="{{ url_for('static', filename='animate.css') }}">
+    <script src="{{ url_for('static', filename='jquery-3.1.0.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='javax.js') }}"></script>
+</head>
+<body>
+<div id="content" class="animated fadeInDown">
+    <img class="logo" src="{{ url_for('static', filename='img/logo.png') }}" alt="WAVA">
+
+    <div class="wrapper">
+      <div class="toggle" title="Clique para ligar ou desligar a lâmpada">
+        <input class="toggle-input" type="checkbox" checked="false" />
+        <div class="toggle-bg"></div>
+        <div class="toggle-switch">
+          <div class="toggle-switch-figure"></div>
+          <div class="toggle-switch-figureAlt"></div>
+        </div>
+      </div>
+    </div>
+
+    Lâmpada <b><span id="lamp-status">ligada</span></b> via Wi-Fi
+
+    <div id="alert">
+        Este serviço utiliza metodologia <a href="https://en.wikipedia.org/wiki/Representational_state_transfer">RESTFul
+        webservice</a><br>
+        Back-end desenvolvido com ♥ em <a href="https://www.python.org/">Python 3.6</a><br>
+        <a href="http://codepen.io/anon/pen/QvWMae">Switch disponível no CodePen.io</a>
+
+    </div>
+</div>
+</body>
+</html>
