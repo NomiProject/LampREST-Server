@@ -6,6 +6,7 @@ from flask import Flask, render_template, jsonify
 from flask import make_response
 from flask_restful import Api
 from werkzeug.contrib.cache import SimpleCache
+from api.v1 import NomiWifiLampAPI
 
 
 class Webservice(Flask):
@@ -57,6 +58,5 @@ class Webservice(Flask):
 
     def execute(self):
         self.pages()
-        # self.api.add_resource(WavaApiV10, '/api/v1.0')
-        # self.api.add_resource(WavaApiV11, '/api/v1.1')
+        self.api.add_resource(NomiWifiLampAPI, '/api/v1.0/wifi/lamp/<string:lamp_switch>')
         self.run(self.host, self.port, self.debug)
