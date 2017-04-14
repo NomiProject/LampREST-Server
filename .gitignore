@@ -1,8 +1,16 @@
+#JetBrains Pycharm files
+.idea/
+.idea/**/*
+
+#Test file/directory
+*test.py
+#/tests/**/*
+
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
 *$py.class
-
 # C extensions
 *.so
 
@@ -87,3 +95,7 @@ ENV/
 
 # Rope project settings
 .ropeproject
+/test/
+
+# Linux background service
+nohup.out
