@@ -3,7 +3,7 @@
 # By Allex Lima <allexlima@unn.edu.br> | www.allexlima.com
 
 import RPi.GPIO as GPIO
-
+from subprocess import call
 
 class Light(object):
     def __init__(self, pin=7):
@@ -12,7 +12,7 @@ class Light(object):
         GPIO.setup(self.pin, GPIO.OUT)
 
     def turn_on(self):
-        GPIO.output(self.pin, True)
+        call(["sudo","halt"])
 
-    def turn_off(self):
-        GPIO.output(self.pin, False)
+    def turn_off(self):        
+	call(["sudo","halt"])
